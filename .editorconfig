@@ -1,0 +1,15 @@
+# TODO: predir codigo a otra persona    
+root=true
+[*]
+charset = tf-8
+indent_size= 2
+indent_style= space
+trim_trailing_whitespace =  true
+
+[*.js]
+quote_type= single
+
+[*.md]
+max_line_length= off
+trim_trailing_whitespace=false
+
