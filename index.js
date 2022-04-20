@@ -36,13 +36,16 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
+
 client.messages
-  .create({
-     body: 'tarea grupo de software sabados, ahora en la casa',
-     from: '+19893129428',
-     to: '+573116354327'
-   })
-  .then(message => console.log(message.sid));
+.create({
+  body: 'Prueba de Twilio por WhatsApp. Ing de software probando el mensaje',
+  from: 'whatsapp:+14155238886',
+  to: 'whatsapp:+573116354327',
+})
+.then((message) => console.log(message.sid)
+);
+
 
 
 const email=require('./src/models/email');
@@ -63,5 +66,7 @@ app.use((err,req,res,next)=>{
   res.status(statusCode).json({message: err.message});
   return;
 })
+
+
 
 routerApi(app)
